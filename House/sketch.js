@@ -6,29 +6,36 @@ function draw() {
 	house();
 }
 
+var sunX = -100;
+
 function house() {
 	noStroke();
 	background(0, 250, 250);
 
 	//Sun
 	fill(255, 255, 0);
-	ellipse(20, 20, 200, 200);
+	ellipse(sunX, 10, 200);
+	sunX += 1;
+
+	if (sunX >= width+100) {
+		sunX = -100;
+	}
 
 	//Rainbow
 	noStroke();
-	fill(255, 0, 0);
+	fill(255, 0, 0, 190);
 	ellipse(200, 300, 500, 500);
-	fill(249, 150, 0);
+	fill(249, 150, 0, 190);
 	ellipse(200, 310, 490, 500);
-	fill(255, 255, 0);
+	fill(255, 255, 0, 190);
 	ellipse(200, 320, 480, 500);
-	fill(0, 250, 0);
+	fill(0, 250, 0, 190);
 	ellipse(200, 330, 470, 500);
-	fill(0, 150, 255);
+	fill(0, 150, 255, 190);
 	ellipse(200, 340, 460, 500);
-	fill(100, 0, 205);
+	fill(100, 0, 205, 190);
 	ellipse(200, 350, 450, 500);
-	fill(200, 0, 255);
+	fill(200, 0, 255, 190);
 	ellipse(200, 360, 440, 500);
 	fill(0, 250, 250);
 	ellipse(200, 370, 430, 500);
