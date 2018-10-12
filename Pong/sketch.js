@@ -7,7 +7,7 @@ var ball;
 var angle;
 
 function setup() {
-	createCanvas(800, 400);
+	createCanvas(600, 400);
 
 	rightSkip = 0;
 	leftSkip = 0;
