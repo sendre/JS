@@ -7,7 +7,7 @@ python bymonitor.py
 Når denne blir kjørt, blir nå en json fil som inneholder dataene hentet i del 1 laget, kalt: stations_data.json
 
 
-Del 2 filer:
+Del 2(backend) filer:
 bysykkel_del1_test.py
 station_rest_app.py
 stations_data.json
