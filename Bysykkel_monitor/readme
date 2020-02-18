@@ -1,4 +1,22 @@
-Min løsning på bysykkelmonitor-oppgaven. Til dette har jeg brukt Python 3.7 med Pandas. Pandas er ikke en del av standardbiblioteket til Python.
+Del 1 filer:
+bymonitor.py
 
 For å kjøre programmet, skriv følgende i terminalen:
 python bymonitor.py
+
+Når denne blir kjørt, blir nå en json fil som inneholder dataene hentet i del 1 laget, kalt: stations_data.json
+
+
+Del 2 filer:
+bysykkel_del1_test.py
+station_rest_app.py
+stations_data.json
+
+For å kjøre testene, skriv følgende i terminalen:
+python bysykkel_del1.test.py
+
+For å starte applikasjonen, skriv følgende i terminalen:
+python station_rest_app.py
+
+Dette starter en development server på http://127.0.0.1:5000/ .
+For å teste applikasjonen brukte jeg Postman(https://www.postman.com/) til å utføre de følgende metodene: GET, POST, PUT, DELETE. Man må da bruke http://127.0.0.1:5000/station/<station_name> , der <station_name> er navnet på den gjeldende stasjonen.
