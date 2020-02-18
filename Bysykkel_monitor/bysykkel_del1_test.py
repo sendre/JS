@@ -1,5 +1,6 @@
 import unittest
 import bymonitor
+import pandas as pd
 
 class TestSum(unittest.TestCase):
     def setUp(self):
@@ -23,16 +24,17 @@ class TestSum(unittest.TestCase):
         self.assertEqual(status, 404)
 
     def test_list_stations_correct(self):
-        """Tests if the return type from the list_stations function is a dictionary
-        when the valid auto discovery url is passed as argument, and response:200"""
-        ret, status = bymonitor.list_stations(self.auto_discovery_url, self.id)
-        self.assertIs(type(ret), dict)
+        """Tests if the return type from the list_stations function is a pandas
+        DataFrame when the valid auto discovery url is passed as argument, and
+        response:200"""
+        ret, status = bymonitor.list_stations(self.id, self.auto_discovery_url, False)
+        self.assertIs(type(ret), pd.DataFrame)
         self.assertEqual(status, 200)
 
     def test_list_stations_404(self):
         """Tests that the list_stations function returns None and response:404
         if a faulty url is passed as argument"""
-        ret, status = bymonitor.list_stations(self.id, self.url_404)
+        ret, status = bymonitor.list_stations(self.id, self.url_404, False)
         self.assertIs(ret, None)
         self.assertEqual(status, 404)
 
