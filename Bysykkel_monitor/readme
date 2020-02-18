@@ -1,0 +1,4 @@
+Min løsning på bysykkelmonitor-oppgaven. Til dette har jeg brukt Python 3.7 med Pandas. Pandas er ikke en del av standardbiblioteket til Python.
+
+For å kjøre programmet, skriv følgende i terminalen:
+python bymonitor.py
